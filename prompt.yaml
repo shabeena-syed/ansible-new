@@ -1,4 +1,4 @@
-- name: vars from prompt
+- name: vars_prompt
   hosts: localhost
   become: yes
   vars_propmt:
