@@ -1,14 +1,10 @@
 - name: display information
-  hosts:node
+  hosts: node
+  vars_files:
+   - vars-files.yaml
   tasks:
     - name: play-1
       ansible.builtin.command: 
-       msg: "play-1"
-
-    - name: play-2
-      ansible.builtin.command: 
-       msg: "play-2"
-
-
+       msg: "hi {{course}} , duration {{}} , trainer {{}}"
 
 
