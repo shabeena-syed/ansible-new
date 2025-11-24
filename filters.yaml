@@ -35,12 +35,14 @@
      register: OUTPUT
 
    - name: print info
-     var_prompt:
-      - name: OUTPUT
-        prompt: info about last command
-        private: no
-     ansible.builtin.debug:
-      msg: "status:{{OUTPUT}}"
+     vars_prompt:
+       - name: OUTPUT
+         prompt: info about last command
+         private: no
+     tasks:
+        - name: print info
+          ansible.builtin.debug:
+           msg: "status:{{OUTPUT}}"
 
       
        
