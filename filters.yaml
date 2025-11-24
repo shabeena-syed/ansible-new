@@ -17,8 +17,6 @@
        msg: "{ num | unique}"
 
   - name: max age
-    become: yes
-    hosts: localhost
     vars:
      age: [3,4,5,6]
     tasks:
