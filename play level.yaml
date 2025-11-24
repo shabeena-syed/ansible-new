@@ -1,5 +1,5 @@
 - name: vars
-  hosts: node
+  hosts: localhost
   vars:
    course: "terraform"
    trainer: "shiva"
