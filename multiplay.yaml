@@ -1,5 +1,5 @@
 - name: display information
-  hosts: node
+  hosts: localhost
   vars_files:
    - vars-files.yaml
   tasks:
