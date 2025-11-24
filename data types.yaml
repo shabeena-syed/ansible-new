@@ -10,7 +10,7 @@
    experience:
     devops: 3
     terraform: 2
-   real-project: true # bolean
+   real_project: true # bolean
 
   tasks:
   - name: print vars
