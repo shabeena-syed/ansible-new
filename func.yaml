@@ -1,7 +1,7 @@
 - name: check number
   hosts: localhost
   become: yes
-  vars_propmt:
+  vars_prompt:
   - name: number
     prompt: please enter number
     private: no
