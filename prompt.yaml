@@ -1,7 +1,7 @@
-- name: vars_prompt
+- name: vars fromprompt
   hosts: localhost
   become: yes
-  vars_propmt:
+  vars_prompt:
    - name: username
      prompt: enter username
      private: false
@@ -11,9 +11,9 @@
      private: false
 
   tasks:
-  - name: printing prompt
-    ansible.builtin.debug:
-     msg: " hi {{username}} password {{password}}"
+   - name: printing prompt
+     ansible.builtin.debug:
+      msg: " hi {{username}} password {{password}}"
    
   
 
