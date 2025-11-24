@@ -3,8 +3,8 @@
   vars_files:
    - vars-files.yaml
   tasks:
-    - name: play-1
+    - name: vars-files
       ansible.builtin.command: 
-       msg: "hi {{course}} , duration {{}} , trainer {{}}"
+       msg: "hi {{course}} , duration {{duration}} , trainer {{trainer}}"
 
 
