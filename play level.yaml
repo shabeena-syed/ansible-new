@@ -1,8 +1,8 @@
 - name: vars
   hosts: localhost
   tasks:
-    - name: task -level
+    - name: task-level
       ansible.builtin.debug:
-       msg: "hi my  course {{course}} trainer {{trainer}}"
+       msg: "hi my course {{course}} ,trainer {{trainer}}"
     
 
