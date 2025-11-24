@@ -44,5 +44,5 @@
   tasks:
   - name: before  and after convert
     ansible.builtin.debug:
-      msg: "before {{my_dict}} , after {{my_dict |  dict2items}}"
+      msg: "before {{my_vars}} , after {{my_vars | item2dict}}"
       ignore_errors: false
