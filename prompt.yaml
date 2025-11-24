@@ -14,6 +14,17 @@
    - name: printing prompt
      ansible.builtin.debug:
       msg: " hi {{username}} password {{password}}"
+
+      preference of vars
+      -----------------
+      1 variabe from arguments
+      2 prompt
+      3 vars files
+      4 play level
+      5 task level
+      6 inventory
+      7 role level
+      
    
   
 

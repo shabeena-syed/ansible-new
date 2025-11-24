@@ -1,0 +1,22 @@
+- name: data types
+  hosts: localhost
+  become: yes
+  vars:
+   course: aws with devops # string r list 
+   tools: # list
+   - linux
+   - ansible
+   - devops
+   experience:
+    devops: 3
+    terraform: 2
+   real project: true # bolean
+
+  tasks:
+  - name: print vars
+    ansible.builtin.debug:
+     msg: "course: {{course}} tools: {{tools}} experience {{experience}} real project {{real}}"
+
+     
+
+
