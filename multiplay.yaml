@@ -3,8 +3,8 @@
   vars_files:
    - vars-files.yaml
   tasks:
-    - name: vars-files
-      ansible.debug.command: 
+    - name: print info
+      ansible.builtin.debug: 
        msg: "hi {{course}} , duration {{duration}} , trainer {{trainer}}"
 
 
