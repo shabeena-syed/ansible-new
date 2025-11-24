@@ -9,8 +9,6 @@
      msg: "hi,{{greetings | upper}}"
 
   - name: duplicates
-    become: yes
-    hosts: localhost
     vars:
      num: [1,2,2,3,3,4,4,5]
     tasks:
