@@ -41,6 +41,8 @@
    my_vars:
    - {'key': 'course', 'value': 'ansible'}
    - {'key': 'trainer', 'value': 'siva'}
-   ansible.builtin.debug:
+  tasks:
+  - name: before  and after convert
+    ansible.builtin.debug:
       msg: "before {{my_dict}} , after {{my_dict |  dict2items}}"
       ignore_errors: false
