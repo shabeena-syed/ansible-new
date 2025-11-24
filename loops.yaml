@@ -1,0 +1,12 @@
+- name: loops demo
+  hosts: localhost
+  become: yes
+  tasks:
+   - name: install pakages
+     ansible.builtin.dnf:
+      name: "{{item}}"
+      state: latest
+     loop:
+     - nginx
+     - git 
+     - postfix
