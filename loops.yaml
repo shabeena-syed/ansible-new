@@ -5,7 +5,9 @@
    - name: install pakages
      ansible.builtin.dnf:
       name: "{{item}}"
-      state: latest
+      enabled: yes
+      state: started
+
      loop:
      - nginx
      - git 
