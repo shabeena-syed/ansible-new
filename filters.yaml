@@ -1,0 +1,9 @@
+- name: uppercase
+  hosts: localhost
+  hosts: become
+  vars:
+   greetings: "good morning"
+  tasks:
+  - name: converting low to uppercase
+    ansible.builtin.debug:
+     msg: "hi,{{greetings | upper}}"
