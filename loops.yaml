@@ -5,7 +5,6 @@
    - name: install pakages
      ansible.builtin.dnf:
       name: "{{item}}"
-      enabled: yes
       state: latest
 
      loop:
