@@ -6,14 +6,14 @@
    duration: "12 hrs"
   tasks:
   - name: display information
-  vars:
-   course: "ansibe"  
-  ansible.builtin.debug:
-    msg: "hi my trainer {{trainer}} course {{}} duration {{}}"
+    vars:
+     course: "ansibe"  
+    ansible.builtin.debug:
+     msg: "hi my trainer {{trainer}} course {{}} duration {{}}"
   
   tasks:
   - name: display information 
-  ansible.builtin.debug:
+    ansible.builtin.debug:
     msg: "hi my trainer {{trainer}} course {{}} duration {{}}"
 
     
