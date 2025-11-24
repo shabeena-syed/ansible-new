@@ -4,30 +4,30 @@
   vars:
    greetings: "good morning"
   tasks:
-  - name: converting low to uppercase
-    ansible.builtin.debug:
-     msg: "hi,{{greetings | upper}}"
+   - name: converting low to uppercase
+     ansible.builtin.debug:
+      msg: "hi,{{greetings | upper}}"
 
-  - name: duplicates
-    vars:
-     num: [1,2,2,3,3,4,4,5]
-    ansible.builtin.debug:
+   - name: duplicates
+     vars:
+      num: [1,2,2,3,3,4,4,5]
+     ansible.builtin.debug:
       msg: "{ num | unique}"
 
-  - name: max age
-    vars:
-     age: [3,4,5,6]
-    ansible.builtin.debug:
-     msg: "{age | max}"
+   - name: max age
+     vars:
+      age: [3,4,5,6]
+     ansible.builtin.debug:
+      msg: "{age | max}"
 
 - name: convert dict to list/items
   hosts: localhost
   become: yes
   tasks:
-  - name: dict to list/item
-    my_dict:
-    course: devops
-    trainer: shiva
-    ansible.builtin.debug:
-     msg: "before {{my_dict}} , after {{my_dict | int}}"
+   - name: dict to list/item
+     my_dict:
+      course: devops
+      trainer: shiva
+     ansible.builtin.debug:
+      msg: "before {{my_dict}} , after {{my_dict | int}}"
     
