@@ -1,0 +1,10 @@
+- name: conditions
+  hosts: localhost
+  become: yes
+  tasks:
+   - name: check user exit r not
+     ansible.builtin.command: id expense
+
+   - name: say hello
+     ansible.builtin.command:
+      msg: "hello"
