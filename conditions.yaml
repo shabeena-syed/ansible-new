@@ -14,7 +14,16 @@
    - name: create user
      ansible.builtin.command : useradd expense
      when: USER.rc !=0 #condition
+     register: OUTPUT
      ignore_errors : true
+
+   - name: checking exit status
+     ansible.builtin.debug:
+      msg: "output is : {{OUTPUT}}"
+
+    
+
+    
 
    - name: say hello
      ansible.builtin.debug:
