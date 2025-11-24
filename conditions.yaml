@@ -17,5 +17,5 @@
      ignore_errors : true
 
    - name: say hello
-     ansible.builtin.command:
+     ansible.builtin.debug:
       msg: "hello"
