@@ -2,13 +2,13 @@
   hosts: localhost
   become: yes
   vars_propmt:
-  - name: username
-    prompt: enter username
-    private: false
+   - name: username
+     prompt: enter username
+     private: false
 
-  - name: password
-    prompt: enter password
-    private: false
+   - name: password
+     prompt: enter password
+     private: false
 
   tasks:
   - name: printing prompt
