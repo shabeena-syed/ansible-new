@@ -7,3 +7,23 @@
   - name: converting low to uppercase
     ansible.builtin.debug:
      msg: "hi,{{greetings | upper}}"
+
+  - name: remove duplicates
+    become: yes
+    hosts: localhost
+    vars:
+     num: [1,2,2,3,3,4,4,5]
+    tasks:
+    - name: remove duplicates
+      ansible.builtin.debg:
+       msg: "{ num | unique}"
+
+  - name: max age
+    become: yes
+    hosts: localhost
+    vars:
+     age: [3,4,5,6]
+    tasks:
+    - name: max age
+      ansible.builtin.debug:
+       msg: "{age | max}"
