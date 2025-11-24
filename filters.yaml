@@ -30,5 +30,23 @@
        course: devops
        trainer: shiva
      ansible.builtin.debug:
-      msg: "before {{my_dict}} , after {{my_dict | item}}"
+      msg: "before {{my_dict}} , after {{my_dict |  dict2items}}"
+     ignore_errors: true
+     registered: OUTPUT
+
+   - name: print info
+     var_prompt:
+      - name: OUTPUT
+        prompt: info about last command
+        private: no
+     tasks:
+     - name: Show input values
+       ansible.builtin.debug:
+        msg: "status:{{OUTPUT}}"
+
+      
+       
+       
+       
+      
     
