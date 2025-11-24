@@ -32,7 +32,7 @@
      ansible.builtin.debug:
       msg: "before {{my_dict}} , after {{my_dict |  dict2items}}"
      ignore_errors: true
-     registered: OUTPUT
+     register: OUTPUT
 
    - name: print info
      var_prompt:
