@@ -34,16 +34,4 @@
      ignore_errors: true
      register: OUTPUT
 
-   - name: print info
-     vars_prompt:
-       - name: OUTPUT
-         prompt: info about last command
-         private: no
-         ansible.builtin.debug:
-          msg: "info:{{OUTPUT}}"
-  
-       
-       
-       
-      
-    
+   
