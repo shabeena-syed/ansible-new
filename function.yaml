@@ -1,25 +1,29 @@
 - hosts: localhost
+  gather_facts: no
   vars:
-    my_value: "12"       # change this to test
+    my_value: "12"
 
   tasks:
 
-    - name: Convert string to number
+    - name: Convert to integer properly
       set_fact:
         num: "{{ my_value | int }}"
+
+    - name: Debug converted value
+      debug:
+        msg: "Value after conversion = {{ num }} (type: {{ num | type_debug }})"
 
     - name: Check if number is greater than 10
       debug:
         msg: "Number {{ num }} is GREATER than 10"
-      when: num > 10
+      when: (num | int) > 10
 
     - name: Check if number is less than 10
       debug:
         msg: "Number {{ num }} is LESS than 10"
-      when: num | int > 10
-
+      when: (num | int) < 10
 
     - name: Check if number is equal to 10
       debug:
         msg: "Number is EXACTLY 10"
-      when: num == 10
+      when: (num | int) == 10
