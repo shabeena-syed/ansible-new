@@ -39,10 +39,8 @@
       - name: OUTPUT
         prompt: info about last command
         private: no
-     tasks:
-     - name: Show input values
-       ansible.builtin.debug:
-        msg: "status:{{OUTPUT}}"
+     ansible.builtin.debug:
+      msg: "status:{{OUTPUT}}"
 
       
        
