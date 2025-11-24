@@ -1,6 +1,6 @@
 - name: uppercase
   hosts: localhost
-  hosts: become
+  become: yes
   vars:
    greetings: "good morning"
   tasks:
