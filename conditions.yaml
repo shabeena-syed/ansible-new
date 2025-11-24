@@ -20,11 +20,7 @@
    - name: checking exit status
      ansible.builtin.debug:
       msg: "output is : {{OUTPUT}}"
-
-    
-
-    
-
+  
    - name: say hello
      ansible.builtin.debug:
       msg: "hello"

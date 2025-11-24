@@ -19,3 +19,15 @@
      age: [3,4,5,6]
     ansible.builtin.debug:
      msg: "{age | max}"
+
+- name: convert dict to list/items
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: dict to list/item
+    my_dict:
+    course: devops
+    trainer: shiva
+    ansible.builtin.debug:
+     msg: "before {{my_dict}} , after {{my_dict | int}}"
+    
