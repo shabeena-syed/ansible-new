@@ -38,11 +38,11 @@
   hosts: localhost
   become: yes
   vars:
-   my_vars:
+   my_list:
    - {'key': 'course', 'value': 'ansible'}
    - {'key': 'trainer', 'value': 'siva'}
   tasks:
   - name: before  and after convert
     ansible.builtin.debug:
-      msg: "before {{my_vars}} , after {{my_vars | item2dict}}"
+      msg: "before {{my_list}} , after {{my_list| item2dict}}"
       ignore_errors: false
