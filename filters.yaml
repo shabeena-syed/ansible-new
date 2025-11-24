@@ -39,10 +39,10 @@
   become: yes
   vars:
    my_list:
-   - {'key': 'course', 'value': 'ansible'}
-   - {'key': 'trainer', 'value': 'siva'}
+    - {'key': 'course', 'value': 'ansible'}
+    - {'key': 'trainer', 'value': 'siva'}
   tasks:
-  - name: before  and after convert
-    ansible.builtin.debug:
-      msg: "before{ {my_list}} , after {{my_list | item2dict}}"
-      
+   - name: before  and after convert
+     ansible.builtin.debug:
+       msg: "before{ {my_list}} , after {{my_list | item2dict}}"
+       ignore_errors: false
