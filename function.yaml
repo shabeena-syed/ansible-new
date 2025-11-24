@@ -16,7 +16,8 @@
     - name: Check if number is less than 10
       debug:
         msg: "Number {{ num }} is LESS than 10"
-      when: num < 10
+      when: num | int > 10
+
 
     - name: Check if number is equal to 10
       debug:
