@@ -4,6 +4,12 @@
   tasks:
    - name: check user exit r not
      ansible.builtin.command: id expense
+     register: USER
+     ignore_errors: true
+
+   - name: printing info
+     ansible.builtin.command:
+      msg :  "user info is : {{USER}}"
 
    - name: say hello
      ansible.builtin.command:
