@@ -34,4 +34,13 @@
      ignore_errors: true
      register: OUTPUT
 
-   
+- name: convert items to dict
+  hosts: localhost
+  become: yes
+  vars:
+   my_vars:
+   - {'key': 'course', 'value': 'ansible'}
+   - {'key': 'trainer', 'value': 'siva'}
+   ansible.builtin.debug:
+      msg: "before {{my_dict}} , after {{my_dict |  dict2items}}"
+      ignore_errors: false
