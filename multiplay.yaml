@@ -4,7 +4,7 @@
    - vars-files.yaml
   tasks:
     - name: vars-files
-      ansible.builtin.command: 
+      ansible.debug.command: 
        msg: "hi {{course}} , duration {{duration}} , trainer {{trainer}}"
 
 
