@@ -1,16 +1,6 @@
 - name: vars
   hosts: localhost
-  vars:
-   course: "terraform"
-   trainer: "shiva"
-   duration: "12 hrs"
   tasks:
-    - name: play-level
-      vars:
-       course: "ansibe"  
-      ansible.builtin.debug:
-       msg: "hi my trainer {{trainer}} course {{course}} duration {{duration}}"
-  
     - name: task -level
       ansible.builtin.debug:
        msg: "hi my trainer {{trainer}} course {{course}} duration {{duration}}"
